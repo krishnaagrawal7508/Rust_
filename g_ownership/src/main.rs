@@ -27,12 +27,17 @@ fn main() {
     // println!("{}", my_string);
 
     // to solve this - passing string to a function
-    let rand_string_1 = String::from("hiiii");
+    let random_string = String::from("solution 1");
+    takes_ownership(random_string.clone());
+    println!("{}", random_string);
+
+    //OR
+    let rand_string_1 = String::from("solution 2");
     let rand_string_2 = takes_ownership_safely(rand_string_1);
     println!("{}", rand_string_2);
 
     // OR
-    let mut rand_string_ = String::from("hiiii");
+    let mut rand_string_ = String::from("solution 3");
     rand_string_ = takes_ownership_safely(rand_string_);
     println!("{}", rand_string_);
 
